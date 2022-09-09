@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "HaSIf5OmeIstHf9riw0xHmzyKlLvHo/QCZQLWj6xB9Af7pKKF0F5d1vUZMn4hLJprghJyqxvFQRqPBnyotS/Rw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SnawBall dev\\source\\repos\\BadApple\\BadApple\\BadApple.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio\\2.1.0\\naudio.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio.asio\\2.1.0\\naudio.asio.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio.core\\2.1.0\\naudio.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio.midi\\2.1.0\\naudio.midi.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio.wasapi\\2.1.0\\naudio.wasapi.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\naudio.winmm\\2.1.0\\naudio.winmm.2.1.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\opencvsharp4\\4.6.0.20220608\\opencvsharp4.4.6.0.20220608.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\opencvsharp4.runtime.win\\4.6.0.20220608\\opencvsharp4.runtime.win.4.6.0.20220608.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\opencvsharp4.windows\\4.6.0.20220608\\opencvsharp4.windows.4.6.0.20220608.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\SnawBall dev\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
