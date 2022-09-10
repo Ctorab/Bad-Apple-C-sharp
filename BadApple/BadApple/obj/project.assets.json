@@ -691,11 +691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SnawBall dev\\source\\repos\\BadApple\\BadApple\\BadApple.csproj",
+      "projectUniqueName": "D:\\github\\Bad-Apple-C-sharp\\BadApple\\BadApple\\BadApple.csproj",
       "projectName": "BadApple",
-      "projectPath": "C:\\Users\\SnawBall dev\\source\\repos\\BadApple\\BadApple\\BadApple.csproj",
+      "projectPath": "D:\\github\\Bad-Apple-C-sharp\\BadApple\\BadApple\\BadApple.csproj",
       "packagesPath": "C:\\Users\\SnawBall dev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SnawBall dev\\source\\repos\\BadApple\\BadApple\\obj\\",
+      "outputPath": "D:\\github\\Bad-Apple-C-sharp\\BadApple\\BadApple\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SnawBall dev\\AppData\\Roaming\\NuGet\\NuGet.Config",

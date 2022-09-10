@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HaSIf5OmeIstHf9riw0xHmzyKlLvHo/QCZQLWj6xB9Af7pKKF0F5d1vUZMn4hLJprghJyqxvFQRqPBnyotS/Rw==",
+  "dgSpecHash": "oeH2UGE6O6sKlhuPokrBtVuIBIWeal+eIpJ83bTz0rO7iEmSKYfbMlSrU+few4q9YAWXS5QN31BcYsX2dqTBZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SnawBall dev\\source\\repos\\BadApple\\BadApple\\BadApple.csproj",
+  "projectFilePath": "D:\\github\\Bad-Apple-C-sharp\\BadApple\\BadApple\\BadApple.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SnawBall dev\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\SnawBall dev\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

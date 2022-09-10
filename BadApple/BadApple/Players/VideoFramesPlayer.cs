@@ -33,34 +33,30 @@ namespace BadApple.Players
         private void WriteFrames()
         {
             var fps = GetVideoFPS();
+            var startTime = DateTime.Now;
 
-            var frameTimer = new Stopwatch();
+            var delay = ((1 / fps) * 1000);            
 
-            for (int i = 0; i < _videFramesNames.Count; i++)
+            int i = 0;
+            while (i < _videFramesNames.Count)
             {
-                frameTimer.Start();
+                var currentTime = DateTime.Now;
+
+                if (currentTime - startTime < DateTime.Now.AddMilliseconds(delay) - currentTime) continue;
+
                 Console.Title = $"{i}/{_videFramesNames.Count}";
 
-                var filePath = $@"{PlayFilePath}\{_videFramesNames[i]}";
+                var filePath = Path.Combine(PlayFilePath, _videFramesNames[i]);
 
                 var frame = GetBitmapFromImage(filePath);
                 var asciiChars = BitmapToASCIIConverter.ConvertBitmapToASCII(frame);
 
-                Console.SetCursorPosition(0, 0);
-                Console.Write(asciiChars);
+                NonBlockingConsole.Write(asciiChars);
 
-                frameTimer.Restart();
+                i++;
 
-                try
-                {
-                    Thread.Sleep((int)(fps / (frameTimer.ElapsedTicks / 1000)));
-                }
-                catch { }
-
-                frameTimer.Restart();
+                startTime = currentTime;
             }
-
-            frameTimer.Stop();
 
             Bitmap GetBitmapFromImage(string imagePath)
             {
@@ -71,9 +67,10 @@ namespace BadApple.Players
 
         private double GetVideoFPS()
         {
-            var videoCapture = new VideoCapture(Program.VideFilePath);
-
-            return videoCapture.Get(VideoCaptureProperties.Fps);
+            using (var videoCapture = new VideoCapture(Program.VideFilePath))
+            {
+                return videoCapture.Get(VideoCaptureProperties.Fps);
+            }
         }
     }
 }

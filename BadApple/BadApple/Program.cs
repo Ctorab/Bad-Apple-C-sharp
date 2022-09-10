@@ -6,8 +6,8 @@ namespace BadApple
 {
     internal class Program
     {
-        //Another video: Saul Goodman 3d.mp4
-        public readonly static string VideFilePath = Path.Combine(Directory.GetCurrentDirectory(), "BAd Apple.mp4");
+        //videos: Saul Goodman 3d.mp4,Bad Apple.mp4
+        public readonly static string VideFilePath = Path.Combine(Directory.GetCurrentDirectory(), "Saul Goodman 3d.mp4");
 
         public readonly static string VideFramesFolderName = "Frames";
         public readonly static string VideFramesFolderPath = Path.Combine(Directory.GetCurrentDirectory(), VideFramesFolderName);

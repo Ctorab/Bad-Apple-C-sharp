@@ -37,6 +37,9 @@ namespace BadApple.Captures
                 i++;
             }
 
+            capture.Dispose();
+            image.Dispose();
+
             Console.Clear();
         }
     }

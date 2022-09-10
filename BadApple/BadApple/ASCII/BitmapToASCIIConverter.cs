@@ -8,8 +8,8 @@ namespace BadApple.ASCII
         private const double WIDTH_OFFSET = 1.5;
 
         //private const string _asciiTable = " ░▒▓█";
-        private const string _asciiTable = " .░▒▓█";
-        //private const string _asciiTable = " .:;+=xX$&";
+        //private const string _asciiTable = " .░▒▓█";
+        private const string _asciiTable = " .:;+=xX$&";
         //private const string _asciiTable = " ,:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
 
         public static char[] ConvertBitmapToASCII(Bitmap bitmap)
