@@ -6,22 +6,16 @@ namespace BadApple.ASCII
     {
         private const double WIDTH_OFFSET = 1.5;
 
-        //private const string _asciiTable = " ░▒▓█";
-        //private const string _asciiTable = " .░▒▓█";
-        private const string _asciiTable = " .:;+=xX$&";
-        //private const string _asciiTable = " ,:;Il!i><~+_-?][}{1)(|/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-
-        public static char[] ConvertBitmapToASCII(Bitmap bitmap)
+        public static char[] ConvertBitmapToASCII(Bitmap bitmap, string asciiTable)
         {
-            float stepCharsSize = 255 / (_asciiTable.Length - 1);
+            float stepCharsSize = 255 / (asciiTable.Length - 1);
 
             bitmap = ResizeBitmap(bitmap);
 
             int height = bitmap.Height;
             int width = bitmap.Width;
 
-            char[] asciiResult = new char[bitmap.Height * bitmap.Width];
-            Array.Fill(asciiResult, ' ');
+            char[] asciiResult = new char[bitmap.Height * bitmap.Width];            
 
             Parallel.For(0, height, y =>
             {
@@ -36,7 +30,7 @@ namespace BadApple.ASCII
 
                     int mapIndex = (int)Math.Floor(avg / stepCharsSize);
 
-                    asciiResult[pixelIndex] = _asciiTable[mapIndex];
+                    asciiResult[pixelIndex] = asciiTable[mapIndex];
                 }
             });
 
