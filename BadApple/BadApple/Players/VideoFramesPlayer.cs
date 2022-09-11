@@ -1,7 +1,6 @@
 ﻿using BadApple.ASCII;
 using BadApple.Domain;
 using OpenCvSharp;
-using System.Diagnostics;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
@@ -35,14 +34,14 @@ namespace BadApple.Players
             var fps = GetVideoFPS();
             var startTime = DateTime.Now;
 
-            var delay = ((1 / fps) * 1000);            
+            var delay = ((1 / fps) * 1000);
 
             int i = 0;
             while (i < _videFramesNames.Count)
             {
                 var currentTime = DateTime.Now;
 
-                if (currentTime - startTime < DateTime.Now.AddMilliseconds(delay) - currentTime) continue;
+                if (currentTime - startTime < DateTime.Now.AddMilliseconds(delay) - DateTime.Now) continue;
 
                 Console.Title = $"{i}/{_videFramesNames.Count}";
 

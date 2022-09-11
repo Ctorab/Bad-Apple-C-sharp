@@ -4,7 +4,6 @@ namespace BadApple.ASCII
 {
     internal static class BitmapToASCIIConverter
     {
-        private const ushort MaxBitmapWidth = 200;
         private const double WIDTH_OFFSET = 1.5;
 
         //private const string _asciiTable = " ░▒▓█";
@@ -14,9 +13,6 @@ namespace BadApple.ASCII
 
         public static char[] ConvertBitmapToASCII(Bitmap bitmap)
         {
-            int consoleWidth = Console.LargestWindowWidth;
-            int consoleHeight = Console.LargestWindowHeight;
-
             float stepCharsSize = 255 / (_asciiTable.Length - 1);
 
             bitmap = ResizeBitmap(bitmap);
@@ -24,14 +20,14 @@ namespace BadApple.ASCII
             int height = bitmap.Height;
             int width = bitmap.Width;
 
-            char[] asciiResult = new char[consoleHeight * consoleWidth];
+            char[] asciiResult = new char[bitmap.Height * bitmap.Width];
             Array.Fill(asciiResult, ' ');
 
             Parallel.For(0, height, y =>
             {
                 for (int x = 0; x < width; x++)
                 {
-                    var pixelIndex = (x + y * consoleWidth);
+                    var pixelIndex = (x + y * width);
 
                     Color color;
                     lock (bitmap) color = bitmap.GetPixel(x, y);
@@ -52,10 +48,16 @@ namespace BadApple.ASCII
             int height = bitmap.Height;
             int width = bitmap.Width;
 
-            var newBitmapHeight = height / WIDTH_OFFSET * MaxBitmapWidth / width;
+            int consoleWidth = Console.WindowWidth;
+            int consoleHeight = Console.WindowHeight;
 
-            if (width > MaxBitmapWidth || height > newBitmapHeight)
-                bitmap = new Bitmap(bitmap, new Size(MaxBitmapWidth, (int)newBitmapHeight));
+            var newBitmapHeight = height / WIDTH_OFFSET * consoleWidth / width;
+
+            if (width > consoleWidth || height > newBitmapHeight)
+                bitmap = new(bitmap, new Size(consoleWidth, (int)newBitmapHeight));
+
+            if(bitmap.Height > consoleHeight)
+                bitmap = new(bitmap, new Size(bitmap.Width, consoleHeight));
 
             return bitmap;
         }
